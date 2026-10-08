@@ -340,3 +340,87 @@ a:hover {
         padding-right: 28px;
     }
 }
+/* Light mode colors */
+:root {
+    --page-bg: #FAF3E0;
+    --card-bg: #FFFCF4;
+    --text-color: #2F3E46;
+    --heading-color: #2A6F77;
+    --header-start: #2A6F77;
+    --header-end: #2A9D8F;
+    --quote-bg: rgba(233, 196, 106, 0.25);
+    --social-bg: #FAF3E0;
+    --social-text: #2A6F77;
+}
+
+/* Dark mode colors replace the light mode variables */
+body.dark-mode {
+    --page-bg: #141B24;
+    --card-bg: #222D3A;
+    --text-color: #E8EDF2;
+    --heading-color: #80D5CB;
+    --header-start: #152F3B;
+    --header-end: #23545B;
+    --quote-bg: rgba(233, 196, 106, 0.12);
+    --social-bg: #2C3A48;
+    --social-text: #80D5CB;
+}
+
+/* Apply the variables to the existing website */
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero {
+    background: linear-gradient(
+        135deg,
+        var(--header-start),
+        var(--header-end)
+    );
+}
+
+.card {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease;
+}
+
+h1, h2 {
+    color: var(--heading-color);
+}
+
+blockquote {
+    color: var(--heading-color);
+    background-color: var(--quote-bg);
+    border-left-color: var(--heading-color);
+}
+
+.social-links a {
+    background-color: var(--social-bg);
+    color: var(--social-text);
+    border-color: var(--heading-color);
+}
+
+.profile-photo {
+    border-color: var(--page-bg);
+}
+
+/* Styling for the new theme toggle button */
+#theme-toggle {
+    background-color: #E9C46A;
+    color: #2F3E46;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Small hover effect for the button */
+#theme-toggle:hover {
+    transform: translateY(-2px);
+}
